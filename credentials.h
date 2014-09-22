@@ -1,5 +1,3 @@
-/* Credentials for Xively Account */
+/* Credentials for Dweet Account */
 
-#define APIKEY "YOUR API KEY HERE"
-#define FEEDID YOU FEED ID HERE
-#define USERAGENT "YOUR DEVICE NAME HERE"
+#define THINGNAME "YOUR THING NAME HERE"
