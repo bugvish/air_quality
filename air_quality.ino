@@ -15,7 +15,7 @@ GSMClient client;
 GPRS gprs;
 GSM gsmAccess(false); // true for debugging
 
-char server[] = "api.xively.com";
+char server[] = "dweet.io";
 
 unsigned long lastConnectionTime = 0; 
 boolean lastConnected = false;
@@ -126,33 +126,19 @@ void sendData(unsigned long thisData)
     int sendLength = 14 + sendRealReal + dataLengthReal + 8;
 
     // send the HTTP PUT request:
-    client.print("PUT /v2/feeds/");
-    client.print(FEEDID);
-    client.println(".csv HTTP/1.1");
-    client.println("Host: api.xively.com");
-    client.print("X-ApiKey: ");
-    client.println(APIKEY);
-    client.print("User-Agent: ");
-    client.println(USERAGENT);
-    client.print("Content-Length: ");
-
-    // This is the charachter length of the content
-    client.println(sendLength);
-
-    // last pieces of the HTTP PUT request:
-    client.println("Content-Type: text/csv");
+    client.print("GET /dweet/for/");
+    client.print(THINGNAME);
+    client.print("?lpo=");
+    client.print(lowpulseoccupancy);
+    client.print("&ratio=");
+    client.print(ratio);
+    client.print("&con=");
+    client.print(concentration);
+    client.println(" HTTP/1.1");
+    client.println("Host: dweet.io");
     client.println("Connection: close");
     client.println();
 
-    // here's the actual content of the PUT request:
-    client.print("lpo,");
-    client.println(lowpulseoccupancy);
-
-    client.print("ratio,");
-    client.println(ratio);
-
-    client.print("con,");
-    client.println(concentration);
   } 
   else
   {
