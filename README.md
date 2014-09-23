@@ -23,4 +23,4 @@ The next stage is implementing the Arduino code to connect to your cellular netw
 
 The final piece to modify is the frequency that data is sent to Dweet.io.   This can be change by modifying the postingInterval variable which is set in milliseconds.  Setting this will dramatically affect the battery life.
 
-The unit will send the following three datapoints per the above interval: concentration(con) of particles, the ratio(ratio) of the particles to air and the low pulse occupancy(lpo). Navigate to [https://dweet.io/follow] and type in the unit's thingname to see the live data stream.
+The unit will send the following three datapoints per the above interval: concentration(con) of particles, the ratio(ratio) of the particles to air and the low pulse occupancy(lpo). Navigate to https://dweet.io/follow and type in the unit's thingname to see the live data stream.
