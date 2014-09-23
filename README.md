@@ -1,7 +1,7 @@
 air-quality
 ===========
 
-This tutorial will cover the fundamentals of deploying a solar powered air quality monitor using the cellular network.  Though we will be using a dust particle sensor to measure air quality, the same setup could easily be modified for other sensors such ____.  This setup also uses the Xively platform which allows for real-time data streams to be displayed on the web.  To begin, you will need:
+This tutorial will cover the fundamentals of deploying a solar powered air quality monitor using the cellular network.  Though we will be using a dust particle sensor to measure air quality, the same setup could easily be modified for other sensors such ____.  This setup also uses the Dweet.io platform which allows for real-time data streams to be displayed on the web.  To begin, you will need:
 
 - Arduino Uno
 - Arduino GSM Shield
